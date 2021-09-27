@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "7991f8c3-706c-456b-a3a8-4ef9578fa1d3",
+		"name": "ControlEmpresas(Mejoramiento)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token_UsuarioAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar_Empresas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMGJhNDA0YTkyNzI2YjBjMzY1MzQiLCJub21icmUiOiJBZG1pbiIsInJvbCI6IlJPTF9BRE1JTiIsImlhdCI6MTYzMjM3NDUyMiwiZXhwIjoxNjMyOTc5MzIyfQ.OVbwAmS9UjftYpOhcAmzuFHNhlNiKQ7e1oRGwiT3TBk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "PEPSI",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pepsi123",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "ROL_EMPRESA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registarEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registarEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar_Empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMGJhNDA0YTkyNzI2YjBjMzY1MzQiLCJub21icmUiOiJBZG1pbiIsInJvbCI6IlJPTF9BRE1JTiIsImlhdCI6MTYzMjM3NDUyMiwiZXhwIjoxNjMyOTc5MzIyfQ.OVbwAmS9UjftYpOhcAmzuFHNhlNiKQ7e1oRGwiT3TBk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "PEPSI",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarEmpresa/614c11537358b718f469c83e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarEmpresa",
+						"614c11537358b718f469c83e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_Empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMGJhNDA0YTkyNzI2YjBjMzY1MzQiLCJub21icmUiOiJBZG1pbiIsInJvbCI6IlJPTF9BRE1JTiIsImlhdCI6MTYzMjM3NDUyMiwiZXhwIjoxNjMyOTc5MzIyfQ.OVbwAmS9UjftYpOhcAmzuFHNhlNiKQ7e1oRGwiT3TBk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarEmpresa/614c11537358b718f469c83e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarEmpresa",
+						"614c11537358b718f469c83e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_Empresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "CocaCola",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cocacola123",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/LoginEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"LoginEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar_Empleado_Empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc2Mzc3LCJleHAiOjE2MzI5ODExNzd9.nGyFGOo18lmsTOaJDjnsZJ0BXUucZ0LMO1Ekcf6nrm4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Diego",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "ROL_EMPLEADO",
+							"type": "text"
+						},
+						{
+							"key": "puesto",
+							"value": "Tecnico",
+							"type": "text"
+						},
+						{
+							"key": "departamento",
+							"value": "Area de Informatica",
+							"type": "text"
+						},
+						{
+							"key": "empleadoEmpresa",
+							"value": "CocaCola",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/registarEmpleado",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"registarEmpleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar_Empleado_Empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Negro",
+							"type": "text"
+						},
+						{
+							"key": "puesto",
+							"value": "Gerente",
+							"type": "text"
+						},
+						{
+							"key": "departamento",
+							"value": "negocios",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarEmpleado/614c17880a71d515482fa02e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarEmpleado",
+						"614c17880a71d515482fa02e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_Usuario_Empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarEmpleado/614c17880a71d515482fa02e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarEmpleado",
+						"614c17880a71d515482fa02e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/ObtenerId/614c171c0a71d515482fa02d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ObtenerId",
+						"614c171c0a71d515482fa02d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Jhonatan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerNombre",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerNombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda_Puesto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "puesto",
+							"value": "Gerente",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerPuesto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerPuesto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Departamento",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzc3Mzk4LCJleHAiOjE2MzI4OTU3OTh9.bem_aKrn9EWPFqrRo7Mu-NaHj2mqLC5ieDnmkJC8NZc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "departamento",
+							"value": "Area de Informatica",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerDepartamento",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerDepartamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Todos_Los_Empleados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTVjNjBhNzFkNTE1NDgyZmEwMmMiLCJub21icmUiOiJQRVBTSSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzgxODE1LCJleHAiOjE2MzI5MDAyMTV9.i-U4ltVVT5Vg8qUpxshdzxI85qBbJPSvS3D47H8qKCE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Jhonatan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/obtenerEmpleados",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtenerEmpleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generar_PDF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTRjMTEyZTczNThiNzE4ZjQ2OWM4M2QiLCJub21icmUiOiJDb2NhQ29sYSIsInJvbCI6IlJPTF9FTVBSRVNBIiwiaWF0IjoxNjMyMzgyNTE3LCJleHAiOjE2MzI5MDA5MTd9.LDrTwnLV9wUPyLeXsIW3WEgRDBtZw24IT5scygoklOc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "empleadoEmpresa",
+							"value": "Juan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/GenerarPdf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"GenerarPdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
